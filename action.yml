@@ -1,0 +1,7 @@
+name: update
+description: https://github.com/champtitles/action-update
+runs:
+  using: "composite"
+  steps:
+    - shell: bash
+      run: ${{ github.action_path }}/action.sh
