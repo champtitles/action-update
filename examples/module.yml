@@ -1,0 +1,18 @@
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - develop
+
+concurrency: update
+
+env:
+  SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+  TARGET_REPO: "git@github.com:champtitles/action-update.git"
+
+jobs:
+  main:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: champtitles/action-update@main
