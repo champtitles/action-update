@@ -36,4 +36,4 @@ sed ${FILE} ${TARGET_KEY} ${PATTERN}
 git commit -m "${TARGET_KEY} ${TARGET_VALUE}"
 
 # retry logic to mitigate race conditions between multiple repositories
-for i in 1 2 3 4 5; do git push origin ${BRANCH} && break || git pull && sleep 5; done
+for i in 1 2 3 4 5; do git push origin ${BRANCH} && break || git pull -r && sleep 5; done
