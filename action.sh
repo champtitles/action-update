@@ -1,4 +1,4 @@
-#!/bin/bash -ex
+#!/bin/bash -e
 
 export DIRECTORY=${DIRECTORY:-.update}
 export FILE=${FILE:-variables.tf}
