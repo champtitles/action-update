@@ -47,7 +47,7 @@ fi
 sed -i "s/${SEARCH_KEY}.*/${SEARCH_KEY}${REPLACE_VALUE}${SUFFIX}/g" ${FILE}
 git config --global user.email "no@reply.com"
 git config --global user.name "GitHub Actions"
-git commit -m "${SEARCH_KEY}${REPLACE_VALUE}" || echo "No changes needed"
+git commit -am "${SEARCH_KEY}${REPLACE_VALUE}" || echo "No changes needed"
 
 # retry logic to mitigate race conditions between multiple repositories
-for i in 1 2 3 4 5; do git push origin && break || git pull -r && sleep 5; done
+for i in 1 2 3 4 5; do git push && break || git pull -r && sleep 5; done
