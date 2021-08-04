@@ -3,7 +3,7 @@
 export DIRECTORY=${DIRECTORY:-.update}
 export FILE=${FILE:-variables.tf}
 export BRANCH=${BRANCH:-develop}
-export SUFFIX=${BRANCH:-\"}
+export SUFFIX=${SUFFIX:-\"}
 
 if [ -z "${SSH_PRIVATE_KEY}" ]; then
     echo "SSH_PRIVATE_KEY is required to clone private repositories"
