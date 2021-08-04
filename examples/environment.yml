@@ -9,6 +9,7 @@ concurrency: update
 env:
   SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
   TARGET_REPO: "git@github.com:champtitles/action-update.git"
+  BRANCH: "main"
   FILE: "main.tf"
   SEARCH_KEY: "action-update.git?ref="
 
