@@ -5,6 +5,10 @@ export FILE=${FILE:-variables.tf}
 export BRANCH=${BRANCH:-develop}
 export SUFFIX=${SUFFIX:-\"}
 
+if [[ "${SUFFIX}" == "off" ]]; then
+    unset SUFFIX
+fi
+
 if [ -z "${SSH_PRIVATE_KEY}" ]; then
     echo "ERROR: SSH_PRIVATE_KEY is required to clone private repositories" && exit 1
 fi
